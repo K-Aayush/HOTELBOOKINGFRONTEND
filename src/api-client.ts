@@ -30,11 +30,13 @@ export const signIn = async (formData: SignInFormData) => {
     body: JSON.stringify(formData),
   });
 
-  const responseBody = await response.json();
+  const body = await response.json();
 
   if (!response.ok) {
-    throw new Error(responseBody.message);
+    throw new Error(body.message);
   }
+
+  return body;
 };
 
 export const validateToken = async () => {
