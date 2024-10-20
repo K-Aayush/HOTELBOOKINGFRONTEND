@@ -3,6 +3,7 @@ import { useMutation, useQueryClient } from "react-query";
 import * as apiClient from "../api-client";
 import { useAppContext } from "../context/AppContext";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export type SignInFormData = {
   email: string;
@@ -65,7 +66,13 @@ const SignIn = () => {
           <span className="text-red-500">{errors.password.message}</span>
         )}
       </label>
-      <span>
+      <span className="flex items-center justify-between">
+        <span className="text-sm">
+          Don't have an account?{" "}
+          <Link className="text-l font-semibold" to="/register">
+            Register here
+          </Link>
+        </span>
         <button
           type="submit"
           className="bg-blue-700 text-white p-2 font-bold text-xl rounded-lg hover:bg-blue-600"
