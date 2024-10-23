@@ -30,6 +30,9 @@ const FacilitiesSection = () => {
           </label>
         ))}
       </div>
+      {errors.facilities && (
+        <span className="text-red-500">{errors.facilities.message}</span>
+      )}
     </div>
   );
 };
