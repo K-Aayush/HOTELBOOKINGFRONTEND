@@ -7,7 +7,19 @@ const FacilitiesSection = () => {
     register,
     formState: { errors },
   } = useFormContext<HotelFormData>();
-  return <div>FacilitiesSection</div>;
+  return (
+    <div>
+      <h2 className="text-2xl font-bold mb-3">Facilities</h2>
+      <div className="grid grid-cols-5 gap-3">
+        {hotelFacilities.map((facility) => (
+          <label>
+            <input type="checkbox" value={facility} />
+            <span>{facility}</span>
+          </label>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default FacilitiesSection;
