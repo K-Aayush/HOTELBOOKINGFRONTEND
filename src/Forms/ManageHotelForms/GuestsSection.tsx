@@ -19,8 +19,8 @@ const GuestsSection = () => {
             className="border border-gray-300 rounded w-full py-1 px-2 font-normal"
             {...register("adultCount", { required: "This field is required" })}
           />
-          {errors.adultCount && (
-            <span className="text-red-500">{errors.adultCount.message}</span>
+          {errors.adultCount?.message && (
+            <span className="text-red-500">{errors.adultCount?.message}</span>
           )}
         </label>
         <label className="text-gray-700 text-sm font-bold flex-1">
@@ -31,8 +31,8 @@ const GuestsSection = () => {
             className="border border-gray-300 rounded w-full py-1 px-2 font-normal"
             {...register("childCount", { required: "This field is required" })}
           />
-          {errors.childCount && (
-            <span className="text-red-500">{errors.childCount.message}</span>
+          {errors.childCount?.message && (
+            <span className="text-red-500">{errors.childCount?.message}</span>
           )}
         </label>
       </div>
