@@ -8,10 +8,10 @@ const GuestsSection = () => {
   } = useFormContext<HotelFormData>();
 
   return (
-    <div>
+    <div className="">
       <h2 className="text-2xl font-bold mb-3">Guests</h2>
-      <div className="">
-        <label className="text-gray-700 text-sm font-bold max-w-[50%]">
+      <div className="flex w-full gap-4 bg-gray-300 py-8 px-4 rounded-md">
+        <label className="text-gray-700 text-sm font-bold flex-1">
           Adult
           <input
             type="number"
@@ -23,7 +23,7 @@ const GuestsSection = () => {
             <span className="text-red-500">{errors.adultCount.message}</span>
           )}
         </label>
-        <label className="text-gray-700 text-sm font-bold max-w-[50%]">
+        <label className="text-gray-700 text-sm font-bold flex-1">
           Children
           <input
             type="number"
