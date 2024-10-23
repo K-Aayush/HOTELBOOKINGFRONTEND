@@ -5,9 +5,9 @@ export default {
     extend: {},
     container: {
       padding: {
-        DEFAULT: "10px",
-        md: "8rem",
-        lg: "14rem",
+        DEFAULT: "12px",
+        md: "10rem",
+        lg: "16rem",
       },
     },
   },
