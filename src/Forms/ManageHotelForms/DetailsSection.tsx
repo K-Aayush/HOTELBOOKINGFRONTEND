@@ -48,11 +48,25 @@ const DetailsSection = () => {
       <label className="text-gray-700 text-sm font-bold flex-1">
         Description
         <textarea
+          rows={10}
           className="border border-gray-300 rounded w-full py-1 px-2 font-normal"
           {...register("description", { required: "This field is required" })}
         />
         {errors.description && (
           <span className="text-red-500">{errors.description.message}</span>
+        )}
+      </label>
+
+      <label className="text-gray-700 text-sm font-bold max-w-[50%]">
+        PricePerNight
+        <input
+          type="number"
+          min={1}
+          className="border border-gray-300 rounded w-full py-1 px-2 font-normal"
+          {...register("pricePerNight", { required: "This field is required" })}
+        />
+        {errors.pricePerNight && (
+          <span className="text-red-500">{errors.pricePerNight.message}</span>
         )}
       </label>
     </div>
