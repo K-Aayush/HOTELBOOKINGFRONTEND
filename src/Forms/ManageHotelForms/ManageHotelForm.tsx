@@ -29,6 +29,14 @@ const ManageHotelForm = () => {
         <FacilitiesSection />
         <GuestsSection />
         <ImagesSection />
+        <span className="flex justify-end">
+          <button
+            type="submit"
+            className="bg-blue-700 rounded-lg text-white text-xl px-3 py-2 font-bold hover:bg-blue-600"
+          >
+            Save
+          </button>
+        </span>
       </form>
     </FormProvider>
   );
