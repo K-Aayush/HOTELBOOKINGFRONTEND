@@ -4,7 +4,7 @@ import { HotelFormData } from "./ManageHotelForm";
 const ImagesSection = () => {
   const {
     register,
-    formstate: { error },
+    formState: { errors },
   } = useFormContext<HotelFormData>();
   return (
     <div>
@@ -30,6 +30,9 @@ const ImagesSection = () => {
           })}
         />
       </div>
+      {errors.imageFiles && (
+        <span className="text-red-500">{errors.imageFiles.message}</span>
+      )}
     </div>
   );
 };
