@@ -33,6 +33,14 @@ const ManageHotelForm = () => {
     formData.append("starRating", formDataJson.starRating.toString());
     formData.append("adultCount", formDataJson.adultCount.toString());
     formData.append("childCount", formDataJson.childCount.toString());
+
+    formDataJson.facilities.forEach((facility, index) => {
+      formData.append(`facilities [${index}]`, facility);
+    });
+
+    Array.from(formDataJson.imageFiles).forEach((imageFile) => {
+      formData.append(`imageFiles`, imageFile);
+    });
   });
 
   return (
