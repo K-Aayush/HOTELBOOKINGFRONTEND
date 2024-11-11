@@ -31,7 +31,9 @@ const ImagesSection = () => {
         />
       </div>
       {errors.imageFiles && (
-        <span className="text-red-500">{errors.imageFiles.message}</span>
+        <span className="text-red-500 text-sm font-bold">
+          {errors.imageFiles.message}
+        </span>
       )}
     </div>
   );
