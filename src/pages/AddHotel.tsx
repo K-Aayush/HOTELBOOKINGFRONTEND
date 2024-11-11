@@ -12,7 +12,11 @@ const AddHotel = () => {
       showToast({ message: "Error Saving Hotel", type: "ERROR" });
     },
   });
-  return <ManageHotelForm />;
+
+  const handleSave = (hotelFormData: FormData) => {
+    mutate(hotelFormData)
+  }
+  return <ManageHotelForm onSave={handleSave} />;
 };
 
 export default AddHotel;
