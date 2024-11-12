@@ -48,7 +48,7 @@ export const validateToken = async () => {
     throw new Error("Token invalid");
   }
 
-  return response.json();
+  return response.json;
 };
 
 export const signOut = async () => {

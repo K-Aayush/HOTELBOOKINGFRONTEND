@@ -34,13 +34,14 @@ const ManageHotelForm = ({ onSave, isLoading }: Props) => {
     formData.append("city", formDataJson.city);
     formData.append("country", formDataJson.country);
     formData.append("description", formDataJson.description);
+    formData.append("type", formDataJson.type);
     formData.append("pricePerNight", formDataJson.pricePerNight.toString());
     formData.append("starRating", formDataJson.starRating.toString());
     formData.append("adultCount", formDataJson.adultCount.toString());
     formData.append("childCount", formDataJson.childCount.toString());
 
-    formDataJson.facilities.forEach((facility, index) => {
-      formData.append(`facilities [${index}]`, facility);
+    formDataJson.facilities.forEach((facility) => {
+      formData.append(`facilities`, facility);
     });
 
     Array.from(formDataJson.imageFiles).forEach((imageFile) => {
