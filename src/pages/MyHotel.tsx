@@ -1,9 +1,15 @@
+import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
 
 const MyHotel = () => {
+    const {data: hotelData} = useQuery("fetchMyHotels", apiClient.fetchMyHotels, {
+        onError: () => {
+            
+        }
+    })
   return (
     <div className="space-y-5">
-      <span>
+      <span className="flex justify-between">
         <h1 className="text-3xl font-bold">My Hotels</h1>
         <Link
           to={"/add-hotel"}
